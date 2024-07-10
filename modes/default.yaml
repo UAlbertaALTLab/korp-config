@@ -1,0 +1,5 @@
+label: default_mode
+preselected_corpora:
+  - test_corpus
+default_within:
+  sentence: sentence

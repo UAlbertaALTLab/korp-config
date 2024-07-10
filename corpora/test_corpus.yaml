@@ -1,0 +1,13 @@
+id: test_corpus
+title: "Test Corpus of Plains Cree"
+description: "An attempt for Antti to start working with."
+mode:
+  - name: default
+within:
+  - label:
+    eng: sentence
+    value: sentence
+context:
+  - label:
+    eng: 1 sentence
+    value: 1 sentence

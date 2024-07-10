@@ -1,0 +1,6 @@
+korp_backend_url: http://localhost:1234/
+languages:
+  - value: eng
+    label: English
+word_picture: false
+has_timespan: false
