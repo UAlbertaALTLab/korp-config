@@ -11,3 +11,12 @@ repo through the following configuration line:
 ```
 CORPUS_CONFIG_DIR = "/patho/to/repo/korp-config/"
 ```
+
+Also, in the frontend, create a `korp-frontend/run_config.json` file
+with the following contents:
+
+```
+{
+    "configDir": "/path/to/repo/korp-config"
+}
+```
