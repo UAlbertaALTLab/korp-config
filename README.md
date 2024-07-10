@@ -45,7 +45,7 @@ And add the corresponding `korp-config/corpora/test_corpus.yaml` file,
 which is already included in this repo.  Create new ones based on this
 one for future use.
 
-You can make sure that the output of the backend at
+You must make sure that the output of the backend at
 http://localhost:1234 shows the corpus of interest in the `corpora`
 list, as follows:
 
