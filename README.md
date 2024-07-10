@@ -49,3 +49,4 @@ You can make sure that the output of the backend at
 http://localhost:1234 shows the corpus of interest in the `corpora`
 list, as follows:
 
+![Screenshot 2024-07-10 at 4 47 38 PM](https://github.com/UAlbertaALTLab/korp-config/assets/248151/903f039a-92b4-4d0a-a294-591997658512)
