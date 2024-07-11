@@ -1,0 +1,12 @@
+extended_component: msd
+label: msd
+opts:
+  contains: _=
+  ends_with: '&='
+  is: '='
+  is_not: '!='
+  matches: '*='
+  matches_not: '!*='
+  starts_with: ^=
+pattern: <span class='msd_sidebar'><%=val%></span>
+sidebar_info_url: markup/msdtags.html

@@ -20,9 +20,8 @@ pos_attributes:
   - lemma: baseform
   - msd: msd
 struct_attributes:
-  - author: author
-  - lang: lang
-  - corpus: corpus
-  - title: title
-  - text: text
-  - paragraph: paragraph
+  - text_title: title
+  - text_author: author
+  - text_lang: lang
+  - text_title1: text_title1
+  - text_title2: text_title2

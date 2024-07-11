@@ -1,0 +1,14 @@
+extended_template: <input ng-model='input' escaper>
+label:
+  eng: baseform
+  swe: grundform
+opts:
+  is: contains
+  is_not: not contains
+  contains: incontains_contains
+  starts_with: starts_with_contains
+  ends_with: ends_with_contains
+  matches: regexp_contains
+  matches_not: not_regexp_contains
+order: 1
+type: set
