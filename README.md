@@ -41,6 +41,7 @@ cwb-encode -s -p - -d /corpora/data/test_corpus -R /corpora/registry/test_corpus
 # Generate the required indices
 cwb-makeall -V test_corpus
 ```
+**NOTE: Make sure you use absolute paths and not relative paths in `cwb-encode`, otherwise they will not be found by the backend later!**
 
 And add the corresponding `korp-config/corpora/test_corpus.yaml` file,
 which is already included in this repo.  Create new ones based on this
