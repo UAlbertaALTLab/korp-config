@@ -9,7 +9,7 @@ that your `korp-backend/config.py` has access to the location of this
 repo through the following configuration line:
 
 ```
-CORPUS_CONFIG_DIR = "/patho/to/repo/korp-config/"
+CORPUS_CONFIG_DIR = "/path/to/repo/korp-config/"
 ```
 
 Also, in the frontend, create a `korp-frontend/run_config.json` file
@@ -36,7 +36,8 @@ To add a `test_corpus.vrt` file as a corpus to Korp, one must **first** run the 
 
 ```
 # Generate the CWB corpus files
-cwb-encode -d /corpora/data/test_corpus -f test_corpus.vrt -R /corpora/registry -xsBC -c ascii -9 -P pos -P lemma
+cwb-encode -s -p - -d /corpora/data/test_corpus -R /corpora/registry/test_corpus -c utf8 -f test_corpus.vrt -P word -P lemma -P msd -P dep -P gloss -S sentence:0+id -S paragraph -S text:0+id+lang+title+author -S corpus:0+id
+
 # Generate the required indices
 cwb-makeall -V test_corpus
 ```
