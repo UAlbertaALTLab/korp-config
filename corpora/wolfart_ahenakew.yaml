@@ -16,9 +16,9 @@ context:
     value: 1 sentence
 pos_attributes:
   - dep: dep
-  - gloss: gloss
-  - lemma: baseform
-  - msd: msd
+  - gloss: Gloss
+  - lemma: Lemma
+  - analysis: Analysis
 struct_attributes:
   - text_title: title
   - text_author: author

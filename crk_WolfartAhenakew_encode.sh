@@ -7,6 +7,9 @@ set -xv
 #PATH="${CWB_PATH}:${PATH}"
 
 corpus_data="/Users/banadoss/korp/corpora/data"
+
+# ensure data corpus folder is empty!
+
 registry="/Users/banadoss/korp/corpora/registry"
 input_data="/Users/banadoss/korp"
 date=$(date +%Y-%m-%d)
@@ -21,7 +24,8 @@ Sentences: $sent_nr
 Updated: $date
 EOF
 echo " ....... created $corpus_data/$l_corpus_name/.info"
-cwb-encode -s -p - -d $corpus_data/$l_corpus_name -R $registry/$l_corpus_name -c utf8 -f $input_data/$l_corpus_name.vrt -P word -P lemma -P msd -P dep -P gloss -S sentence:0+id -S paragraph -S text:0+id+lang+title+author -S corpus:0+id
+# there's a default -P word field at the beginning.  Then we encode the rest of the positional fields.
+cwb-encode -s -p - -d $corpus_data/$l_corpus_name -R $registry/$l_corpus_name -c utf8 -f $input_data/$l_corpus_name.vrt -P word -P lemma -P analysis -P gloss -P msd -P deps -S sentence:0+id -S paragraph -S text:2+id+lang+title+author -S corpus:0+id
 echo " ....... $l_corpus_name converted into the CWB binary format"
 cwb-makeall -r $registry -D $l_corpus_name
 echo " ....... created lexicon and index for p-attributes for $l_corpus_name"

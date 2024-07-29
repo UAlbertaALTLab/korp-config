@@ -1,0 +1,13 @@
+extended_template: <input ng-model='input' escaper>
+label:
+  eng: analysis
+opts:
+  is: '='
+  is_not: '!='
+  contains: _=
+  starts_with: ^=
+  ends_with: '&='
+  matches: '*='
+  matches_not: '!*='
+order: 1
+type: set

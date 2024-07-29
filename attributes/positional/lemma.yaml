@@ -1,7 +1,6 @@
-order: 2
-type: set
+extended_template: <input ng-model='input' escaper>
 label:
-  eng: gloss
+  eng: lemma
 opts:
   is: '='
   is_not: '!='
@@ -10,3 +9,5 @@ opts:
   ends_with: '&='
   matches: '*='
   matches_not: '!*='
+order: 1
+type: set
