@@ -1,5 +1,5 @@
 label: default_mode
 preselected_corpora:
-  - test_corpus
+  - wolfart_ahenakew
 default_within:
   sentence: sentence
