@@ -35,6 +35,9 @@ those also need to be updated.
 To add a `test_corpus.vrt` file as a corpus to Korp, one must **first** run the following commands on CWB:
 
 ```
+# Ensure you are using the right registry
+export CORPUS_REGISTRY=/corpora/registry
+
 # Generate the CWB corpus files
 cwb-encode -s -p - -d /corpora/data/test_corpus -R /corpora/registry/test_corpus -c utf8 -f test_corpus.vrt -P word -P lemma -P msd -P dep -P gloss -S sentence:0+id -S paragraph -S text:0+id+lang+title+author -S corpus:0+id
 
