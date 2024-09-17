@@ -15,10 +15,10 @@ context:
     eng: 1 sentence
     value: 1 sentence
 pos_attributes:
-  - lemma: Lemma
-  - analysis: Analysis
-  - dependency: Dependency
-  - gloss: Gloss
+  - lemma: lemma
+  - analysis: analysis
+  - dependency: dependency
+  - gloss: gloss
 struct_attributes:
   - text_title: title
   - text_author: author
