@@ -12,3 +12,10 @@ services:
     # LFS mounts
     - "/Users/data_local/application-data/korp-backend/corpora:/corpora"
     - "/Users/data_local/application-data/korp-backend/vrt_files:/vrt_files"
+
+  korp-frontend:
+    restart: always
+    hostname: korp-frontend-container
+    build: ./frontend/
+    ports:
+      - "9111:80" # frontend loader
