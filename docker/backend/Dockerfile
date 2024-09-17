@@ -19,6 +19,9 @@ WORKDIR /app/cwb-3.5.0-src
 RUN install-scripts/install-linux
 
 WORKDIR /app
+
+COPY import_vrt.sh import_vrt.sh
+
 # Download backend version code
 ADD https://github.com/spraakbanken/korp-backend/archive/9c6e289c6ba0be38ff1f223cc4711b21e414ff2a.tar.gz korp_backend.tgz
 RUN tar -xvzf korp_backend.tgz \
@@ -37,9 +40,12 @@ RUN chown -R korp /app \
 && chgrp -R korp /app
 
 USER korp
+WORKDIR /app
+ADD https://api.github.com/repos/UAlbertaALTLab/korp-config/git/refs/heads/main version.json
+RUN git clone -b main https://github.com/UAlbertaALTLab/korp-config.git
 WORKDIR /app/korp-backend
 EXPOSE 1234
+ENV CORPUS_REGISTRY="/corpora/registry"
 
 # Start server
-#CMD ["gunicorn --worker-class gevent --bind 0.0.0.0:1234 --workers 4 --max-requests 250 --limit-request-line 0 'run:create_app()'"]
-CMD python3 run.py
+CMD CORPUS_REGISTRY="/corpora/registry" gunicorn --worker-class gevent --bind 0.0.0.0:1234 --workers 4 --max-requests 250 --limit-request-line 0 'run:create_app()'
