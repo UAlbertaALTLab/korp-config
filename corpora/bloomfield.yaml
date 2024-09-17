@@ -1,0 +1,27 @@
+id: wolfart_ahenakew
+title: "Bloomfield Texts"
+description: "Bloomfield Texts"
+mode:
+  - name: default
+within:
+  - label:
+    eng: sentence
+    value: sentence
+  - label:
+    eng: paragraph
+    value: paragraph
+context:
+  - label:
+    eng: 1 sentence
+    value: 1 sentence
+pos_attributes:
+  - lemma: Lemma
+  - analysis: Analysis
+  - dependency: Dependency
+  - gloss: Gloss
+struct_attributes:
+  - text_title: title
+  - text_author: author
+  - text_lang: lang
+  - text_title1: text_title1
+  - text_title2: text_title2
