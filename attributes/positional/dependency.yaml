@@ -1,0 +1,11 @@
+label: dependency
+opts:
+  contains: _=
+  ends_with: '&='
+  is: '='
+  is_not: '!='
+  matches: '*='
+  matches_not: '!*='
+  starts_with: ^=
+extended_template: <input ng-model='input' escaper>
+type: set
