@@ -4,9 +4,3 @@ languages:
     label: English
 word_picture: false
 has_timespan: false
-corporafolders:
-  - title: nêhiyawêwin (Plains Cree) texts
-    description: nêhiyawêwin (Plains Cree) texts
-    contents:
-      - wolfart_ahenakew
-      - bloomfield
