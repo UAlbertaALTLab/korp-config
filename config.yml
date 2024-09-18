@@ -1,4 +1,4 @@
-korp_backend_url: http://localhost:1234/
+korp_backend_url: https://backend.korp.altlab.dev/
 languages:
   - value: eng
     label: English
