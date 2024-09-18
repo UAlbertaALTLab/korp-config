@@ -1,5 +1,6 @@
 label: default_mode
 preselected_corpora:
   - wolfart_ahenakew
+  - bloomfield
 default_within:
   sentence: sentence
