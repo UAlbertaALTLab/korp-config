@@ -4,7 +4,7 @@ languages:
     label: English
 word_picture: false
 has_timespan: false
-corporafolders:
+folders:
   - plainscree:
     title: nêhiyawêwin (Plains Cree) texts
     description: nêhiyawêwin (Plains Cree) texts
