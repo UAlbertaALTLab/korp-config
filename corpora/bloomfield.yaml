@@ -22,6 +22,6 @@ pos_attributes:
 struct_attributes:
   - text_title: title
   - text_author: author
-  - text_lang: lang
+  - corpus_lang: lang
   - text_title1: text_title1
   - text_title2: text_title2
