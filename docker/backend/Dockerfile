@@ -1,7 +1,7 @@
 FROM python:3.10-bookworm
 LABEL maintainer="Felipe Bañados Schwerter <banadoss@ualberta.ca>"
 
-ARG KORP_UID_GID=60011
+ARG KORP_UID_GID=60005
 
 RUN mkdir /app \
 && groupadd --gid ${KORP_UID_GID} korp \
