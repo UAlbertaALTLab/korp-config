@@ -4,3 +4,7 @@ preselected_corpora:
   - bloomfield
 default_within:
   sentence: sentence
+folders:
+  plainscree:
+    title: nêhiyawêwin (Plains Cree) texts
+    description: nêhiyawêwin (Plains Cree) texts

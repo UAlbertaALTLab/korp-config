@@ -3,6 +3,7 @@ title: "Bloomfield Corpus"
 description: "Corpus edited by Leonard Bloomfield"
 mode:
   - name: default
+    folder: plainscree
 within:
   - label:
     eng: sentence

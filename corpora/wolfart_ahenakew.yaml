@@ -3,6 +3,7 @@ title: "Ahenakew-Wolfart Texts"
 description: "Plains Cree texts compiled and edited by H. C. Wolfart and Freda Ahenakew"
 mode:
   - name: default
+    folder: plainscree
 within:
   - label:
     eng: sentence
