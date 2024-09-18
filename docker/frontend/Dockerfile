@@ -25,6 +25,12 @@ RUN git clone -b main https://github.com/UAlbertaALTLab/korp-config.git
 WORKDIR /app/korp-frontend
 # Tell the frontend about the config folder
 COPY run_config.json run_config.json
+
+# Use ALTLAB logo
+COPY altlab-export.svg app/img/gu_logo_sv_head.svg
+# Update link
+RUN sed -i  -e 's/href=\"https:\/\/gu.se\/\"/href=\"https:\/\/altlab.ualberta.ca\/\"/g' app/scripts/components/header.js
+
 RUN yarn install
 RUN yarn build
 
