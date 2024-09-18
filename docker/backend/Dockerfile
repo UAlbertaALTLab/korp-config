@@ -21,6 +21,7 @@ RUN install-scripts/install-linux
 WORKDIR /app
 
 COPY import_vrt.sh import_vrt.sh
+COPY recount_sentences.sh recount_sentences.sh
 
 # Download backend version code
 ADD https://github.com/spraakbanken/korp-backend/archive/9c6e289c6ba0be38ff1f223cc4711b21e414ff2a.tar.gz korp_backend.tgz
