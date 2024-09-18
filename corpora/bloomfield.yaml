@@ -1,6 +1,6 @@
 id: bloomfield
-title: "Bloomfield Texts"
-description: "Bloomfield Texts"
+title: "Bloomfield Corpus"
+description: "Corpus edited by Leonard Bloomfield"
 mode:
   - name: default
 within:
