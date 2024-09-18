@@ -1,4 +1,4 @@
-label: default_mode
+label: Default Mode
 preselected_corpora:
   - wolfart_ahenakew
   - bloomfield
