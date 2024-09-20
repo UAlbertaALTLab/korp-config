@@ -8,7 +8,7 @@ VRT_FILES="/vrt_files"
 # Documentation for this field is available at 
 VRT_FORMAT_STRUCTURE="-P word -P lemma -P analysis -P deps -P gloss -S sentence:0+id -S paragraph -S text:2+id+lang+title+author -S corpus:0+id -U \"\""
 if [ "$NAME" = "bloomfield" ]; then
-    VRT_FORMAT_STRUCTURE="-P word -P lemma -P analysis -P deps -P gloss -S sentence:0+id -S paragraph -S text:2+id+title+author -S corpus:0+id+lang -U \"\""
+    VRT_FORMAT_STRUCTURE="-P word -P lemma -P analysis -P deps -P gloss -S sentence:0+id -S paragraph:0+id -S text:2+id+title+author -S corpus:0+id+lang -U \"\""
 fi
 echo "Use ./import_vrt.sh filename_without_extension"
 echo "for example, ./import_vrt.sh wolfart_ahenakew"
