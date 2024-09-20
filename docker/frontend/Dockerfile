@@ -25,11 +25,11 @@ RUN git clone -b main https://github.com/UAlbertaALTLab/korp-config.git
 WORKDIR /app/korp-frontend
 # Tell the frontend about the config folder
 COPY run_config.json run_config.json
-
-# Use ALTLAB logo
-COPY altlab-export.svg app/img/gu_logo_sv_head.svg
-# Update link
-RUN sed -i  -e 's/href=\"https:\/\/gu.se\/\"/href=\"https:\/\/altlab.ualberta.ca\/\"/g' app/scripts/components/header.js
+# Add our local variations.  If more changes are added, we should just fork the frontend as well, but for now this works.
+COPY locale-eng.json app/translations/locale-eng.json
+COPY header.js app/scripts/components/header.js
+COPY simple-search.js app/scripts/components/simple-search.js
+COPY altlab-export.svg app/img/altlab.svg
 
 RUN yarn install
 RUN yarn build
