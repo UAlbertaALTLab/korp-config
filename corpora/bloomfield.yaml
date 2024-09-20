@@ -28,3 +28,7 @@ struct_attributes:
   - text_author: author
   - corpus_lang: lang
   - sentence_id: sentence_id
+custom_attributes:
+  - speechdb:
+      custom_type: struct
+      pattern: <a href="https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=<%= pos_attrs.word %>&exact=exact&status=all&quality=all&kind=all"><%= pos_attrs.word %> on speech-db...</a>

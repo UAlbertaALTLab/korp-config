@@ -26,3 +26,7 @@ struct_attributes:
   - text_lang: lang
   - text_title1: text_title1
   - text_title2: text_title2
+custom_attributes:
+  - speechdb:
+      custom_type: struct
+      pattern: <a href="https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=<%= pos_attrs.word %>&exact=exact&status=all&quality=all&kind=all"><%= pos_attrs.word %> on speech-db...</a>
