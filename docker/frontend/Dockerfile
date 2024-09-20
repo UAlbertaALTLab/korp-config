@@ -29,6 +29,7 @@ COPY run_config.json run_config.json
 COPY locale-eng.json app/translations/locale-eng.json
 COPY header.js app/scripts/components/header.js
 COPY simple-search.js app/scripts/components/simple-search.js
+COPY util.ts app/scripts/util.ts
 COPY altlab-export.svg app/img/altlab.svg
 
 RUN yarn install
