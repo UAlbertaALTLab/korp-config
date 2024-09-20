@@ -15,7 +15,7 @@ echo "for example, ./import_vrt.sh wolfart_ahenakew"
 echo "file must be in the $VRT_FILES folder"
 
 mkdir -v $DATA_FOLDER/$NAME
-cwb-encode -s -p - -d $DATA_FOLDER/$NAME -R $REGISTRY_FOLDER/$NAME -c utf8 -f $VRT_FILES/$NAME.vrt $VRT_FORMAT_STRUCTURE
+cwb-encode -s -p - -d $DATA_FOLDER/$NAME -R $REGISTRY_FOLDER/$NAME -c utf8 -B -f $VRT_FILES/$NAME.vrt $VRT_FORMAT_STRUCTURE
 cwb-makeall -r $REGISTRY_FOLDER -D $NAME
 cwb-huffcode -r $REGISTRY_FOLDER -A $NAME
 rm -fv $DATA_FOLDER/$NAME/*.corpus
