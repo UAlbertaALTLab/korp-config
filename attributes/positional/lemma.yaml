@@ -11,3 +11,4 @@ opts:
   matches_not: '!*='
 order: 1
 type: set
+external_search: https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=&translation=&analysis=&lemma=<%= val %>&exact=exact&status=all&quality=all&kind=all

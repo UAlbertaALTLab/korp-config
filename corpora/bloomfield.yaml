@@ -28,4 +28,3 @@ struct_attributes:
   - text_author: author
   - corpus_lang: lang
   - sentence_id: sentence_id
-  - paragraph_id: paragraph_id
