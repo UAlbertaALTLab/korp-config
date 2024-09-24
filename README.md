@@ -43,7 +43,7 @@ You will likely want to read and understand the [CWB Corpus Encoding and Managem
 Once you have a `.vrt` file, you can continue the process.
 
 ### Generate the configuration files for the frontend to show your corpus
-1. Create a `corpora/corpus_name.yaml` file (replace `corpus_name`).  Unless you have new kinds of fields and a very different `vrt` file structure from the ones already used in `altlab`, you can:
+1. Create a `corpora/corpus_name.yaml` file (replace `corpus_name`).  Unless you have new kinds of fields and a very different `vrt` file structure from the ones already used in altlab, you can:
    - Copy one of the existing `yaml` files, for example, `cp corpora/wolfart_ahenakew.yaml corpora/corpus_name.yaml`
    - Change the `id`, `title`, and `description` fields.
    - Select a `folder` for the corpus in the `default` mode. Make sure the folder exists in the `modes/default.yaml` file.
@@ -52,7 +52,7 @@ Once you have a `.vrt` file, you can continue the process.
      ```
      -P word -P lemma -P analysis -P deps -P gloss -S sentence:0+id -S paragraph -S text:2+id+lang+title+author -S corpus:0+id -U ""
      ```
-    This format means that there are 5 p-attributes (word, lemma, analysis, deps, gloss) and 4 xml-based s-attributes (sentence, paragraph, text, corpus).  The `text` tag can be used recursively up to a nesting of 2, the others cannot.  `sentence` and `corpus` XML tags can have an `id` attribute, while `text` tags can have `id`, `lang`, `title`, and `author` attributes.
+     This format means that there are 5 p-attributes (word, lemma, analysis, deps, gloss) and 4 xml-based s-attributes (sentence, paragraph, text, corpus).  The `text` tag can be used recursively up to a nesting of 2, the others cannot.  `sentence` and `corpus` XML tags can have an `id` attribute, while `text` tags can have `id`, `lang`, `title`, and `author` attributes.
    - If your format is different, generate a special case for the script to handle it. follow the example of the following lines:
      ```
      if [ "$NAME" = "bloomfield" ]; then
