@@ -3,13 +3,13 @@
 This repo contains all files required to deploy korp in our infrastructure.
 There's three parts to this mayhem:
 1. The configuration files expected by both korp-frontend and korp-backend, which is most of the content in this repository.
-2. The docker files (in `docker/`) required to generate our docker images for both the frontend and the backend. 
+2. The files required to generate our docker images for both the frontend and the backend (in `docker/`). 
    - The `docker/docker-compose.yml` file includes instructions for the deployment of our images
    - The `docker/deploy` script contains all commands required to perform a "korp upgrade" in the repo:  These upgrades are **for local altlab changes only**:  The versions of korp-frontend, korp-backend, and cwb are fixed and updates to those are likely to require further changes in the code, so developers are expected to manually change versions when needed by modifying the docker files.
    - The image folders, `backend/` and `frontend/`.  Each contains:
      - A `Dockerfile` with the instructions to make the images
-     - A set of files that have been personalized and that need to replace other files in their respective korp codebases. *Eventually we instead recover having forks of the source, but the effort in rebasing and identifying repo divergences seems equivalent.*
-3. The `corpora` structure and the scripts that can properly import `vrt` files into korp.
+     - A set of files that have been customized and that need to replace other files in their respective korp codebases. *Eventually we could instead have forks of the source repos, but the effort in rebasing and identifying repo divergences seems equivalent.*
+3. The `corpora` configuration files and the scripts that can properly import `vrt` files into korp.
 
 ## How do I add a new corpus to korp?
 There are some steps involved in the generation of a new corpus.  
@@ -28,7 +28,6 @@ Once you have a `.vrt` file, you can continue the process.
    - Copy one of the existing `yaml` files, for example, `cp corpora/wolfart_ahenakew.yaml corpora/corpus_name.yaml`
    - Change the `id`, `title`, and `description` fields.
    - Select a `folder` for the corpus in the `default` mode. Make sure the folder exists in the `modes/default.yaml` file.
-   - Verify that the fields match the design of the `vrt` file. See step (n).
 2. Make sure that the `backend/import_vrt.sh` file allows CWB to understand your specific `vrt` format:
    - If you are just following the `wolfart_ahenakew.vrt` format, there's nothing you need to do.  Currently, the format is:
      ```
@@ -41,6 +40,7 @@ Once you have a `.vrt` file, you can continue the process.
         VRT_FORMAT_STRUCTURE="-P word -P lemma -P analysis -P deps -P gloss -S sentence:0+id -S paragraph -S text:2+id+title+author -S corpus:0+id+lang -U \"\""
      fi
      ```
+   Verify that the fields you previously described in `corpora/corpus_name.yaml` match the structure of the `vrt` file. The `yaml` format assumes mappings of the form `cwb_field_name: attribute_presentation_yaml`. The keys correspond to the name of the field *in the CWB registry file for the corpus*, and the values correspond to the file name of an attribute description *in the `attributes/` folder of this repository, or otherwise completely inlined*.
 3. Commit your changes to this repo and push
 ### Deploy the new changes to the server
 1. Deploy your repo changes:
