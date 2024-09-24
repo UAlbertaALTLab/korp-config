@@ -146,11 +146,13 @@ angular.module("korpApp").component("simpleSearch", {
                 if (currentText) {
                     if (ctrl.isDiacriticInsensitive) {
                         currentText = currentText
-                            .replace(/a|â|á|à|ā/gi,"[a|â|á|à|ā]")
-                            .replace(/e|ê|é|è|ē/gi,"[e|ê|é|è|ē]")
-                            .replace(/i|î|í|ì|ī/gi,"[i|î|í|ì|ī]")
-                            .replace(/o|ô|ó|ò|ō/gi,"[o|ô|ó|ò|ō]")
-                            .replace(/u|û|ú|ù|ū/gi,"[u|û|ú|ù|ū]")
+                            .replace(/a|â|á|à|ā|ă/gi,"[a|â|á|à|ā|ă]")
+                            .replace(/e|ê|é|è|ē|ĕ/gi,"[e|ê|é|è|ē|ĕ]")
+                            .replace(/i|î|í|ì|ī|ĭ/gi,"[i|î|í|ì|ī|ĭ]")
+                            .replace(/o|ô|ó|ò|ō|ŏ/gi,"[o|ô|ó|ò|ō|ŏ]")
+                            .replace(/u|û|ú|ù|ū|ŭ/gi,"[u|û|ú|ù|ū|ŭ]")
+                            .replace(/l|ƚ/gi,"[l|ƚ]")
+                            .replace(/'|ʔ|h|\?/gi,"['|ʔ|h|\?/]")
                     }
                     suffix = ctrl.isCaseInsensitive ? " %c" : ""
                     const wordArray = currentText.split(" ")
