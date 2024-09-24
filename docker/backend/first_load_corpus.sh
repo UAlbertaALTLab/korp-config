@@ -16,8 +16,8 @@ if [ -f $VRT_FILES/$NAME.vrt ]; then
         echo "The corpus name has a data folder for CWB, even though the corpus is not registered!"
         echo "Remove the $DATA_FOLDER/$NAME to first import the corpus."
     fi
-    ./import_vrt.sh $NAME
-    ./recount_sentences.sh $NAME
+    /app/import_vrt.sh $NAME
+    /app/recount_sentences.sh $NAME
 else
     echo "I cannot find the $NAME.vrt file."
     echo "Please place it in the appropriate folder (see docker-compose.yml)"

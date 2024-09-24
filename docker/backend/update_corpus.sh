@@ -9,8 +9,8 @@ if [ $REPLY == 'y' ]; then
     echo "Performing corpus update for $NAME..."
     rm -v $REGISTRY_FOLDER/$NAME
     rm -rv $DATA_FOLDER/$NAME
-    ./import_vrt.sh $NAME
-    ./recount_sentences.sh $NAME
+    /app/import_vrt.sh $NAME
+    /app/recount_sentences.sh $NAME
 else
     echo "Nothing done."
 fi
