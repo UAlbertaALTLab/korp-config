@@ -19,7 +19,7 @@ Updating the corpus benefits from the code required in the addition in the new c
      local$ ssh altlab.dev
  altlab-gw$ scp bloomfield.vrt altlab-itw:
  altlab-gw$ ssh altlab-itw:
-altlab-itw$ sudo -u korp cp -v bloomfield.vrt /data_local/application-data/korp-backend/vrt_files
+altlab-itw$ sudo -u korp cp -v bloomfield.vrt /data_local/application-data/korp-backend/vrt_files/
 ```
 
 2. Run the `update_corpus` script with the corpus name **without the `vrt` extension**.  If you just run the previous step:
@@ -59,7 +59,7 @@ Once you have a `.vrt` file, you can continue the process.
         VRT_FORMAT_STRUCTURE="-P word -P lemma -P analysis -P deps -P gloss -S sentence:0+id -S paragraph -S text:2+id+title+author -S corpus:0+id+lang -U \"\""
      fi
      ```
-   Verify that the fields you previously described in `corpora/corpus_name.yaml` match the structure of the `vrt` file. The `yaml` format assumes mappings of the form `cwb_field_name: attribute_presentation_yaml`. The keys correspond to the name of the field *in the CWB registry file for the corpus*, and the values correspond to the file name of an attribute description *in the `attributes/` folder of this repository, or otherwise completely inlined*.
+   Verify that the fields you previously described in `corpora/corpus_name.yaml` match the structure of the `vrt` file. The `yaml` file assumes mappings of the form `cwb_field_name: attribute_presentation_yaml`. The keys correspond to the name of the field *in the CWB registry file for the corpus*, and the values correspond to the file name of an attribute description *in the `attributes/` folder of this repository, or otherwise completely inlined*.
 3. Commit your changes to this repo and push
 ### Deploy the new changes to the server
 1. Deploy your repo changes:
