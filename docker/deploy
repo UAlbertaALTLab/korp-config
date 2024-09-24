@@ -1,0 +1,5 @@
+#!/bin/bash
+# This file is very much based on the process followed by the other systems in altlab.
+git pull
+docker-compose build
+docker-compose up -d --remove-orphans
