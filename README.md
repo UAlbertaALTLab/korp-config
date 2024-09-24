@@ -22,7 +22,7 @@ If you follow our instructions to upload a new corpus, later updates to the `.vr
 altlab-itw$ sudo -u korp cp -v bloomfield.vrt /data_local/application-data/korp-backend/vrt_files/
 ```
 
-2. Run the `update_corpus` script with the corpus name **without the `vrt` extension**.  If you just run the previous step:
+2. Run the `update_corpus` script with the corpus name **without the `vrt` extension**.  If you just ran the previous step:
 ```
  you@altlab-itw$ sudo -i -u korp
 korp@altlab-itw$ cd korp-config/docker/
