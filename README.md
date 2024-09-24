@@ -12,7 +12,7 @@ There's three parts to this mayhem:
 3. The `corpora` configuration files and the scripts that can properly import `vrt` files into korp.
 
 ## How do I update a corpus already in korp?
-Updating the corpus benefits from the code required in the addition in the new corpus. To update a korpus (say, for example, the `bloomfield` corpus):
+If you follow our instructions to upload a new corpus, later updates to the `.vrt` file require only the following (say, for example, for the `bloomfield` corpus):
 1. Copy the `bloomfield.vrt` file to the appropriate location:  **Check the folder mappings in `docker/docker-compose.yml` for up-to-date info**, but it is likely to be just `altlab-itw:/data_local/application-data/korp-backend/vrt_files`.  Ensure that the `korp` user has read access to this file. If you have `sudo` powers in `altlab-itw`, you can move the file from your local computer to the appropriate location 
 ```
      local$ scp bloomfield.vrt altlab.dev:
