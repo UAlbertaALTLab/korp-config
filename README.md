@@ -11,6 +11,25 @@ There's three parts to this mayhem:
      - A set of files that have been customized and that need to replace other files in their respective korp codebases. *Eventually we could instead have forks of the source repos, but the effort in rebasing and identifying repo divergences seems equivalent.*
 3. The `corpora` configuration files and the scripts that can properly import `vrt` files into korp.
 
+## How do I update a corpus already in korp?
+Updating the corpus benefits from the code required in the addition in the new corpus. To update a korpus (say, for example, the `bloomfield` corpus):
+1. Copy the `bloomfield.vrt` file to the appropriate location:  **Check the folder mappings in `docker/docker-compose.yml` for up-to-date info**, but it is likely to be just `altlab-itw:/data_local/application-data/korp-backend/vrt_files`.  Ensure that the `korp` user has read access to this file. If you have `sudo` powers in `altlab-itw`, you can move the file from your local computer to the appropriate location 
+```
+     local$ scp bloomfield.vrt altlab.dev:
+     local$ ssh altlab.dev
+ altlab-gw$ scp bloomfield.vrt altlab-itw:
+ altlab-gw$ ssh altlab-itw:
+altlab-itw$ sudo -u korp cp -v bloomfield.vrt /data_local/application-data/korp-backend/vrt_files
+```
+
+2. Run the `update_corpus` script with the corpus name **without the `vrt` extension**.  If you just run the previous step:
+```
+ you@altlab-itw$ sudo -i -u korp
+korp@altlab-itw$ cd korp-config/docker/
+korp@altlab-itw$ docker-compose exec korp-backend bash /app/update_corpus.sh bloomfield
+``` 
+Respond `y` and press enter when asked to confirm that you want to update this corpus.
+
 ## How do I add a new corpus to korp?
 There are some steps involved in the generation of a new corpus.  
 
@@ -55,25 +74,6 @@ Once you have a `.vrt` file, you can continue the process.
    ```
    korp@altlab-itw $ docker-compose exec korp-backend bash /app/first_load_corpus.sh corpus_name
    ```
-
-## How do I update a corpus already in korp?
-Updating the corpus benefits from the code required in the addition in the new corpus. To update a korpus (say, for example, the `bloomfield` corpus):
-1. Copy the `bloomfield.vrt` file to the appropriate location:  **Check the folder mappings in `docker/docker-compose.yml` for up-to-date info**, but it is likely to be just `altlab-itw:/data_local/application-data/korp-backend/vrt_files`.  Ensure that the `korp` user has read access to this file. If you have `sudo` powers in `altlab-itw`, you can move the file from your local computer to the appropriate location 
-```
-     local$ scp bloomfield.vrt altlab.dev:
-     local$ ssh altlab.dev
- altlab-gw$ scp bloomfield.vrt altlab-itw:
- altlab-gw$ ssh altlab-itw:
-altlab-itw$ sudo -u korp cp -v bloomfield.vrt /data_local/application-data/korp-backend/vrt_files
-```
-
-2. Run the `update_corpus` script with the corpus name **without the `vrt` extension**.  If you just run the previous step:
-```
- you@altlab-itw$ sudo -i -u korp
-korp@altlab-itw$ cd korp-config/docker/
-korp@altlab-itw$ docker-compose exec korp-backend bash /app/update_corpus.sh bloomfield
-``` 
-Respond `y` and press enter when asked to confirm that you want to update this corpus.
 
 # Configuration files for korp (old documentation)
 
