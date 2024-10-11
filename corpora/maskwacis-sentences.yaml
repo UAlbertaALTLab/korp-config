@@ -26,7 +26,8 @@ struct_attributes:
 custom_attributes:
   - recording:
       custom_type: struct
-      pattern: Testing <%= struct_attrs.sentence_recording %>
+      pattern: <audio controls preload=none><source src="https://speech-db.altlab.app<%= struct_attrs.sentence_recording %>" type="audio/mp4" /></audio>
+      label: Best Recording
   - speechdb:
       custom_type: struct
       pattern: <a href="https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=<%= struct_attrs.sentence_transcription %>&exact=exact&status=all&quality=all&kind=all"><%= struct_attrs.sentence_transcription %> on speech-db...</a>
