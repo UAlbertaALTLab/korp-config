@@ -26,7 +26,7 @@ struct_attributes:
 custom_attributes:
   - recording:
       custom_type: struct
-      pattern: <%= struct_attrs.sentence_recording %>
+      pattern: Testing <%= struct_attrs.sentence_recording %>
   - speechdb:
       custom_type: struct
       pattern: <a href="https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=<%= struct_attrs.sentence_transcription %>&exact=exact&status=all&quality=all&kind=all"><%= struct_attrs.sentence_transcription %> on speech-db...</a>

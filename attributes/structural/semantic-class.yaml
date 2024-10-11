@@ -1,3 +1,11 @@
 label:
-  eng: Semantic Classes
+  eng: Semantic Class
+opts:
+  is: contains
+  is_not: not contains
+  contains: incontains_contains
+  starts_with: starts_with_contains
+  ends_with: ends_with_contains
+  matches: regexp_contains
+  matches_not: not_regexp_contains
 type: set
