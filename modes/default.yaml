@@ -2,7 +2,6 @@ label: Default Mode
 preselected_corpora:
   - wolfart_ahenakew
   - bloomfield
-  - maskwacis-sentences
 default_within:
   sentence: sentence
 folders:
