@@ -22,6 +22,8 @@ RUN tar -xvzf korp_frontend.tgz \
 WORKDIR /app
 ADD https://api.github.com/repos/UAlbertaALTLab/korp-config/git/refs/heads/main version.json
 RUN git clone -b main https://github.com/UAlbertaALTLab/korp-config.git
+# Mostly to replace the one from the repo with local stuff.  There must be a better way to do this.
+COPY config.yml korp-config/config.yml
 WORKDIR /app/korp-frontend
 # Tell the frontend about the config folder
 COPY run_config.json run_config.json
@@ -31,7 +33,6 @@ COPY header.js app/scripts/components/header.js
 COPY simple-search.js app/scripts/components/simple-search.js
 COPY util.ts app/scripts/util.ts
 COPY altlab-export.svg app/img/altlab.svg
-
 RUN yarn install
 RUN yarn build
 
