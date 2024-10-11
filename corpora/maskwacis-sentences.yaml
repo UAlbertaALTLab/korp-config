@@ -18,15 +18,15 @@ context:
 pos_attributes:
   - lemma: lemma
   - analysis: analysis
-  - dependency: dependency
-  - gloss: gloss
 struct_attributes:
-  - text_title: title
-  - text_author: author
-  - text_lang: lang
-  - text_title1: text_title1
-  - text_title2: text_title2
+  - translation: translation
+  - id: sentence_id
+  - transcription: transcription
+  - semantic-class: semantic-class
 custom_attributes:
+  - recording:
+      custom_type: struct
+      pattern: pos_attrs.recording
   - speechdb:
       custom_type: struct
       pattern: <a href="https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=<%= pos_attrs.word %>&exact=exact&status=all&quality=all&kind=all"><%= pos_attrs.word %> on speech-db...</a>
