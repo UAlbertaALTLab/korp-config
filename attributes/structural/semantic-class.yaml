@@ -9,3 +9,4 @@ opts:
   matches: regexp_contains
   matches_not: not_regexp_contains
 type: set
+internal_search: true
