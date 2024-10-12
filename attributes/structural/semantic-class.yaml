@@ -9,4 +9,4 @@ opts:
   matches: regexp_contains
   matches_not: not_regexp_contains
 type: set
-internal_search: true
+pattern: <a href="https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=&translation=&analysis=&lemma=&status=all&quality=all&kind=all&semantic_class=<%= encodeURIComponent(val) %>&speaker="><%= val %></a>
