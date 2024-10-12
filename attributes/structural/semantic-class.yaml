@@ -9,4 +9,7 @@ opts:
   matches: regexp_contains
   matches_not: not_regexp_contains
 type: set
-pattern: <%=val%>, see in <a href="/#?search=cqp|<%= encodeURIComponent("[_.sentence_semantic-class contains \""+val.replace(".","\\.")+"\"]") %>&corpus=maskwacis-sentences">Korp</a>, <a href="https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=&translation=&analysis=&lemma=&status=all&quality=all&kind=all&semantic_class=<%= encodeURIComponent(val) %>&speaker=">Speech DB</a>
+pattern: >
+  <%=val%>, see in 
+  <a href=\"/#?search=cqp|<%= encodeURIComponent(\"[_.sentence_semantic-class contains \""+val.replace(".","\\.")+"\"]") %>&corpus=maskwacis-sentences">Korp</a>, 
+  <a href="https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=&translation=&analysis=&lemma=&status=all&quality=all&kind=all&semantic_class=<%= encodeURIComponent(val) %>&speaker=">Speech DB</a>"
