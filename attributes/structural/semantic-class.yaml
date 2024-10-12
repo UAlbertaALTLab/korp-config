@@ -10,7 +10,7 @@ opts:
   matches_not: not_regexp_contains
 type: set
 pattern: >
-  <p><%= val %>
-  <a href="/#?search=cqp|[_.sentence_semantic-class contains %22+<%=val.replace(".","\\.")%>%22]&corpus=maskwacis-sentences">Korp</a>,
-  <a href="https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=&translation=&analysis=&lemma=&status=all&quality=all&kind=all&semantic_class=<%=val%>&speaker=">Speech DB</a>
+  <p><%= val %> (in
+  <a href="/#?search=cqp|[_.sentence_semantic-class contains %22+<%=val.replaceAll(".","\\.")%>%22]&corpus=maskwacis-sentences">Korp</a>,
+  <a href="https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=&translation=&analysis=&lemma=&status=all&quality=all&kind=all&semantic_class=<%=val%>&speaker=">Speech DB</a>)
   </p>
