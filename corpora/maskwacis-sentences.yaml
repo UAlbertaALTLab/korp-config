@@ -23,6 +23,9 @@ struct_attributes:
   - sentence_transcription: transcription
   - sentence_semantic-class: semantic-class
   - sentence_recording: recording
+  - sentence_speaker: speaker
+  - sentence_session: session_id
+  - sentence_timestamp: timestamp
 custom_attributes:
   - speechdb:
       custom_type: struct
