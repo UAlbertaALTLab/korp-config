@@ -11,6 +11,6 @@ opts:
 type: set
 pattern: >
   <p><%= val %> (in
-  <a href="/#?search=cqp|[_.sentence_semantic-class contains %22<%=val.replaceAll(".","\\.")%>%22]&corpus=maskwacis-sentences">Korp</a>,
-  <a href="https://speech-db.altlab.app/maskwacis/advanced_search_results/?transcription=&translation=&analysis=&lemma=&status=all&quality=all&kind=all&semantic_class=<%=val%>&speaker=">Speech DB</a>)
+  <a href="/#?search=cqp|[_.sentence_semantic-class contains %22<%=val.replaceAll(".","\\.").split(" ")[0]+".*"%>%22]&corpus=maskwacis-sentences">Korp</a>,
+  <a href="https://speech-db.altlab.app/maskwacis/entries?session=all&semantic_class=<%=val%>&hyponyms=checked">Speech DB</a>)
   </p>
