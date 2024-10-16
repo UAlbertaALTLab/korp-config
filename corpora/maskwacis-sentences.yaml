@@ -16,7 +16,9 @@ context:
     eng: 1 sentence
     value: 1 sentence
 pos_attributes:
+  - lemma: lemma
   - analysis: analysis
+  - gloss: gloss
 struct_attributes:
   - sentence_translation: translation
   - sentence_id: sentence_id
