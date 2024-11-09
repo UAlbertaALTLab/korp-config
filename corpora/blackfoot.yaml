@@ -16,13 +16,10 @@ context:
     eng: 1 sentence
     value: 1 sentence
 pos_attributes:
-  - lemma: lemma
   - analysis: analysis
-  - dependency: dependency
+  - morphemes: morphemes
   - gloss: gloss
 struct_attributes:
+  - sentence_translation: translation
+  - sentence_id: sentence_id
   - text_title: title
-  - text_author: author
-  - text_lang: lang
-  - text_title1: text_title1
-  - text_title2: text_title2
