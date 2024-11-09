@@ -1,0 +1,28 @@
+id: blackfoot
+title: "Blackfoot Example Corpus"
+description: "Corpus example from ULethbridge Nov 9 Meeting"
+mode:
+  - name: default
+    folder: blackfoot
+within:
+  - label:
+    eng: sentence
+    value: sentence
+  - label:
+    eng: paragraph
+    value: paragraph
+context:
+  - label:
+    eng: 1 sentence
+    value: 1 sentence
+pos_attributes:
+  - lemma: lemma
+  - analysis: analysis
+  - dependency: dependency
+  - gloss: gloss
+struct_attributes:
+  - text_title: title
+  - text_author: author
+  - text_lang: lang
+  - text_title1: text_title1
+  - text_title2: text_title2

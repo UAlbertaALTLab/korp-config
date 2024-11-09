@@ -1,0 +1,12 @@
+order: 2
+type: set
+label:
+  eng: morphemes
+opts:
+  is: '='
+  is_not: '!='
+  contains: _=
+  starts_with: ^=
+  ends_with: '&='
+  matches: '*='
+  matches_not: '!*='

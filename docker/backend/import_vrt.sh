@@ -13,6 +13,11 @@ fi
 if [ "$NAME" = "maskwacis-sentences" ]; then
    VRT_FORMAT_STRUCTURE="-P word -P lemma -P analysis -P gloss -S sentence:0+id+translation+recording+transcription+semantic-class/+speaker+session+timestamp  -U \"\""
 fi
+
+if [ "$NAME" = "blackfoot" ]; then
+   VRT_FORMAT_STRUCTURE="-P word -P morphemes -P analysis -S sentence:0+id+translation -S text:0+title -S corpora:2+title -U \"\""
+fi
+
 echo "Use ./import_vrt.sh filename_without_extension"
 echo "for example, ./import_vrt.sh wolfart_ahenakew"
 echo "file must be in the $VRT_FILES folder"
