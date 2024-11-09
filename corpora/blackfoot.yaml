@@ -14,8 +14,8 @@ within:
     value: paragraph
 context:
   - label:
-    eng: 3 sentences
-    value: 3 sentences
+    eng: 1 sentence
+    value: 1 sentence
 pos_attributes:
   - analysis: analysis
   - morphemes: morphemes
