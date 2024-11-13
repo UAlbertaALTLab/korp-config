@@ -7,15 +7,15 @@ mode:
     folder: blackfoot
 within:
   - label:
-    eng: sentence
+      eng: sentence
     value: sentence
-  - label:
-    eng: paragraph
-    value: paragraph
 context:
   - label:
-    eng: 1 sentence
-    value: 1 sentence
+      eng: 2 sentences
+    value: 2 sentence
+  - label:
+      eng: full text
+    value: 1 text
 pos_attributes:
   - analysis: analysis
   - morphemes: morphemes
