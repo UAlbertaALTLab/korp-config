@@ -4,3 +4,8 @@ languages:
     label: English
 word_picture: false
 has_timespan: false
+auth_module:
+  module: "basic_auth"
+  options:
+    show_remember: true
+    default_value_remember: true

@@ -63,7 +63,12 @@ CORPUS_CONFIG_DIR = "/app/korp-config"
 LAB_MODE = False
 
 # Plugins to load
-PLUGINS = []
+PLUGINS = [ "plugins.json_auth"]
 
 # Plugin configuration
-PLUGINS_CONFIG = {}
+PLUGINS_CONFIG = {
+    "plugins.json_auth": {
+        "JSON_DATA_PATH":"/auth/users.json",
+        "PROTECTED_FILE":"/auth/restricted_corpora.txt"
+    }
+}

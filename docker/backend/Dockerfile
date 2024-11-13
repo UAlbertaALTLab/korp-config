@@ -33,6 +33,7 @@ RUN pip install -r requirements.txt
 RUN pip install gunicorn
 
 COPY config.py instance/config.py
+COPY auth.py plugins/json_auth.py
 
 RUN chown -R korp /app \
 && chgrp -R korp /app
