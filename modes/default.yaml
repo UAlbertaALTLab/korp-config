@@ -1,6 +1,7 @@
 label: Default Mode
 preselected_corpora:
-  - blackfoot
+  - wolfart_ahenakew
+  - bloomfield
 default_within:
   sentence: sentence
 folders:
@@ -9,4 +10,4 @@ folders:
     description: nêhiyawêwin (Plains Cree) texts
   blackfoot:
     title:  Blackfoot texts
-    description: Blackfoot texts (description)
+    description: Blackfoot texts
