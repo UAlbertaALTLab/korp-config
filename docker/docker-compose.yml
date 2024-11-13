@@ -12,6 +12,7 @@ services:
     # LFS mounts
     - "/data_local/application-data/korp-backend/corpora:/corpora"
     - "/data_local/application-data/korp-backend/vrt_files:/vrt_files"
+    - "/data_local/application-data/korp-backend/auth:/auth"
 
   korp-frontend:
     restart: always
