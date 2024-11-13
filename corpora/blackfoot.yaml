@@ -2,6 +2,7 @@ id: blackfoot
 title: "Blackfoot Example Corpus"
 description: "Corpus example from ULethbridge Nov 9 Meeting"
 limited_access: true
+reading_mode: true
 mode:
   - name: default
     folder: blackfoot
