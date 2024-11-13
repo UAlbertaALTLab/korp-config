@@ -2,9 +2,9 @@ extended_template: <input ng-model='input' escaper>
 label:
   eng: analysis
 opts:
+  contains: _=
   is: '='
   is_not: '!='
-  contains: _=
   starts_with: ^=
   ends_with: '&='
   matches: '*='
