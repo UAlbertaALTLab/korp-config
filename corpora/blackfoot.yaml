@@ -21,7 +21,8 @@ pos_attributes:
   - analysis: analysis
   - morphemes: morphemes
   - gloss: gloss
-struct_attributes:
   - sentence_translation: translation
   - sentence_id: sentence_id
+
+struct_attributes:
   - text_title: title
