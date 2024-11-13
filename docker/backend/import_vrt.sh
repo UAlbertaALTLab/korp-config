@@ -15,7 +15,7 @@ if [ "$NAME" = "maskwacis-sentences" ]; then
 fi
 
 if [ "$NAME" = "blackfoot" ]; then
-   VRT_FORMAT_STRUCTURE="-P word -P morphemes -P analysis -S sentence:0+id+translation -S text:0+id+title -S corpora:2+title -U \"\""
+   VRT_FORMAT_STRUCTURE="-P word -P morphemes -P analysis -S sentence:0+id+translation -S text:0+_id+title -S corpora:2+title -U \"\""
 fi
 
 echo "Use ./import_vrt.sh filename_without_extension"
