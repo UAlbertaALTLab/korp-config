@@ -1,2 +1,5 @@
 label:
   eng: Sentence ID
+opts:
+  is: '='
+  is_not: '!='

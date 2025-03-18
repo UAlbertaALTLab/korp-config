@@ -23,6 +23,8 @@ pos_attributes:
   - gloss: gloss
   - sentence_translation: translation
   - sentence_id: sentence_id
+  - sentence_original: original
 
 struct_attributes:
   - text_title: title
+  - text_source: source
