@@ -1,0 +1,5 @@
+label:
+  eng: Section Nº
+opts:
+  is: '='
+  is_not: '!='

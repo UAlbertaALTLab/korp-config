@@ -1,0 +1,7 @@
+label:
+  eng: editor
+extended_component: structServiceAutocomplete
+opts:
+  is: '='
+  is_not: '!='
+  

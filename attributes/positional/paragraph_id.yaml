@@ -1,0 +1,5 @@
+label:
+  eng: Paragraph ID
+opts:
+  is: '='
+  is_not: '!='

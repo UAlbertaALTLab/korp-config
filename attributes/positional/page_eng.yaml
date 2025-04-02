@@ -1,0 +1,5 @@
+label:
+  eng: Page in English
+opts:
+  is: '='
+  is_not: '!='

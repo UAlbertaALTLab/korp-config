@@ -1,0 +1,5 @@
+label:
+  eng: Chapter Nº
+opts:
+  is: '='
+  is_not: '!='

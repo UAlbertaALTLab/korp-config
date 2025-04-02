@@ -2,7 +2,7 @@ id: ojibwe
 title: "Ojibwe Example Corpus"
 description: "Corpus example from UBC"
 limited_access: true
-reading_mode: true
+reading_mode: false
 mode:
   - name: default
     folder: ojibwe
@@ -19,12 +19,22 @@ context:
     value: 1 text
 pos_attributes:
   - analysis: analysis
-  - morphemes: morphemes
-  - gloss: gloss
-  - sentence_translation: translation
-  - sentence_id: sentence_id
-  - sentence_original: original
+  - lemma: lemma
+  - sentence_num: sentence_id
+  - paragraph_num: paragraph_id
+  - paragraph_page_ojb: page_ojb
+  - paragraph_page_eng: page_eng
+  - paragraph_text_eng: translation
+  - chapter_num: chapter_num
+  - chapter_ojb_title: title
+  - chapter_eng_title: title
+  - section_num: section_num
+  - section_ojb_title: title
+  - section_eng_title: title
+
 
 struct_attributes:
   - text_title: title
   - text_source: source
+  - text_authors: author
+  - text_editors: editor

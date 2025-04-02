@@ -1,0 +1,5 @@
+label:
+  eng: Page in Ojibwe
+opts:
+  is: '='
+  is_not: '!='
