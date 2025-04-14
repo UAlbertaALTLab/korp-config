@@ -30,7 +30,7 @@ struct_attributes:
   - paragraph_num: paragraph_id
   - paragraph_page_ojb: page_ojb
   - paragraph_page_eng: page_eng
-  - paragraph_text_eng: translation
+  - paragraph_text_eng: ptranslation
   - chapter_num: chapter_num
   - chapter_ojb_title: title
   - chapter_eng_title: title
