@@ -20,6 +20,12 @@ context:
 pos_attributes:
   - analysis: analysis
   - lemma: lemma
+
+struct_attributes:
+  - text_title: title
+  - text_source: source
+  - text_authors: author
+  - text_editors: editor
   - sentence_num: sentence_id
   - paragraph_num: paragraph_id
   - paragraph_page_ojb: page_ojb
@@ -31,10 +37,3 @@ pos_attributes:
   - section_num: section_num
   - section_ojb_title: title
   - section_eng_title: title
-
-
-struct_attributes:
-  - text_title: title
-  - text_source: source
-  - text_authors: author
-  - text_editors: editor
