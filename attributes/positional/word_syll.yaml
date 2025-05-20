@@ -1,5 +1,5 @@
 label:
-  eng: Sentence translation
+  eng: Word in Syllabics
 opts:
   is: '='
   is_not: '!='

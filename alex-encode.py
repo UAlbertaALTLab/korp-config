@@ -23,7 +23,7 @@ def vrt_escape(str):
     return str.replace('&','&amp;').replace(' ','&#x20;').replace('/','&sol;').replace('<','&lt;').replace('>','&gt;').replace('|','&vert;').replace('\n','&NewLine;')
 
 def attr_escape(str):
-    return str.replace('"','&quot;')
+    return str.replace('"','&quot;').replace('\n','&NewLine;')
 
 with open(INPUT_FILE) as f:
     datareader = csv.reader(f)
