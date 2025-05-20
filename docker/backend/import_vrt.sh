@@ -15,7 +15,7 @@ if [ "$NAME" = "maskwacis-sentences" ]; then
 fi
 
 if [ "$NAME" = "blackfoot" ]; then
-   VRT_FORMAT_STRUCTURE="-P word -P morphemes -P analysis -P _tail -S sentence:0+id+translation+original -S text:0+_id+title+source -S corpora:2+title -U \"\""
+   VRT_FORMAT_STRUCTURE="-P word -P morphemes -P analysis -P _tail -P notes -P word_syll -S sentence:0+id+translation+original+original_syll -S text:0+_id+title+source -S corpora:2+title -U \"\""
 fi
 
 if [ "$NAME" = "ojibwe" ]; then
