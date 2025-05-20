@@ -8,4 +8,3 @@ opts:
   ends_with: '&='
   matches: '*='
   matches_not: '!*='
-type: set
