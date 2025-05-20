@@ -76,6 +76,6 @@ with open(OUTPUT_FILE,'w') as f:
 
         f.write(f'<sentence id="{attr_escape(str(index))}" original="{attr_escape(original)}" translation="{attr_escape(translation)}" original_syll="{attr_escape(original_syll)}">\n')
         for row_index, row in enumerate(sentence):
-            f.write(f'{vrt_escape(row[header1])}\t{vrt_escape(row[header2])}\t{vrt_escape(row[header3])}\t{"&NewLine;" if row_index == len(sentence) - 1 else "&nbsp;"}\t{vrt_escape(row[header5]) if header5 in row.keys() else ""}\t{vrt_escape(row[header6]) if header6 in row.keys() else ""}\n')
+            f.write(f'{row[header1].strip()}\t{vrt_escape(row[header2])}\t{vrt_escape(row[header3])}\t{"&NewLine;" if row_index == len(sentence) - 1 else "&nbsp;"}\t{vrt_escape(row[header5]) if header5 in row.keys() else ""}\t{vrt_escape(row[header6]) if header6 in row.keys() else ""}\n')
         f.write('</sentence>\n')
     f.write('</text>\n')
