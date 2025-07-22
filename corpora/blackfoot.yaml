@@ -22,11 +22,11 @@ pos_attributes:
   - morphemes: morphemes
   - gloss: gloss
   - word_syll: word_syll
-  - notes: notes
-struct_attributes:
-  - text_title: title
-  - text_source: source
   - sentence_translation: translation
   - sentence_id: sentence_id
   - sentence_original: original
   - sentence_original_syll: original_syll
+  - notes: notes
+struct_attributes:
+  - text_title: title
+  - text_source: source
