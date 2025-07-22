@@ -1,0 +1,32 @@
+id: uhlenbeck
+title: "1911 Uhlenbeck Texts"
+description: ""
+limited_access: true
+reading_mode: true
+mode:
+  - name: default
+    folder: blackfoot
+within:
+  - label:
+      eng: sentence
+    value: sentence
+context:
+  - label:
+      eng: 2 sentences
+    value: 2 sentence
+  - label:
+      eng: full text
+    value: 1 text
+pos_attributes:
+  - analysis: analysis
+  - morphemes: morphemes
+  - gloss: gloss
+  - word_syll: word_syll
+  - notes: notes
+struct_attributes:
+  - text_title: title
+  - text_source: source
+  - sentence_translation: translation
+  - sentence_id: sentence_id
+  - sentence_original: original
+  - sentence_original_syll: original_syll

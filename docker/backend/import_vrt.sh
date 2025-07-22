@@ -18,6 +18,10 @@ if [ "$NAME" = "blackfoot" ]; then
    VRT_FORMAT_STRUCTURE="-P word -P morphemes -P analysis -P _tail -P notes -P word_syll -S sentence:0+id+translation+original+original_syll -S text:0+_id+title+source -S corpora:2+title -U \"\""
 fi
 
+if [ "$NAME" = "uhlenbeck" ]; then
+   VRT_FORMAT_STRUCTURE="-P word -P morphemes -P analysis -P _tail -P notes -P word_syll -S sentence:0+id+translation+original+original_syll -S text:0+_id+title+source -S corpora:2+title -U \"\""
+fi
+
 if [ "$NAME" = "ojibwe" ]; then
    VRT_FORMAT_STRUCTURE="-P word -P lemma/ -P analysis/ -S sentence:0+num -S paragraph:0+num+page_ojb+page_eng+text_eng -S chapter:0+num+ojb_title+eng_title -S section:0+num+ojb_title+eng_title -S text:0+id+title+authors+editors -S corpus:0+title+editor+lang -U \"\""
 fi
