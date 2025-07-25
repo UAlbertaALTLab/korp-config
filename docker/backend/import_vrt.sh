@@ -15,11 +15,11 @@ if [ "$NAME" = "maskwacis-sentences" ]; then
 fi
 
 if [ "$NAME" = "blackfoot" ]; then
-   VRT_FORMAT_STRUCTURE="-P word -P morphemes -P analysis -P _tail -P notes -P word_syll -S sentence:0+id+original+translation+original_syll -S text:0+_id+source+title -S corpora:2+title -U \"\""
+   VRT_FORMAT_STRUCTURE="-P word -P morphemes -P analysis -P _tail -P notes -P word_syll -S sentence:0+id+original+translation+original_syll -S text:0+_id+source+title -S corpus:2+title -U \"\""
 fi
 
 if [ "$NAME" = "uhlenbeck" ]; then
-   VRT_FORMAT_STRUCTURE="-P word -P wordtranslation -P _tail -P notes -S sentence:0+id+original+translation+original_syll -S text:0+_id+source+title -S corpora:2+title -U \"\""
+   VRT_FORMAT_STRUCTURE="-P word -P wordtranslation -P _tail -P notes -S sentence:0+id+original+translation+original_syll -S text:0+_id+source+title -S corpus:2+title -U \"\""
 fi
 
 if [ "$NAME" = "ojibwe" ]; then

@@ -88,7 +88,7 @@ def process_file(INPUT_FILE, ID, HAS_DESCRIPTION_IN_HEADERS=True):
         for row_index, row in enumerate(sentence):
             try:
                 if IS_UHLENBECK:
-                    f.write(f'{row[header1].strip()}\t{vrt_escape(row[header8]) if header2 in row.keys() else ""}\t{"&NewLine;" if row_index == len(sentence) - 1 else "&nbsp;"}\t{vrt_escape(row[header5]) if header5 in row.keys() else ""}\n')
+                    f.write(f'{row[header1].strip()}\t{vrt_escape(row[header8]) if header8 in row.keys() else ""}\t{"&NewLine;" if row_index == len(sentence) - 1 else "&nbsp;"}\t{vrt_escape(row[header5]) if header5 in row.keys() else ""}\n')
                 else:
                     f.write(f'{row[header1].strip()}\t{vrt_escape(row[header2]) if header2 in row.keys() else ""}\t{vrt_escape(row[header3]) if header3 in row.keys() else ""}\t{"&NewLine;" if row_index == len(sentence) - 1 else "&nbsp;"}\t{vrt_escape(row[header5]) if header5 in row.keys() else ""}\t{vrt_escape(row[header6]) if header6 in row.keys() else ""}\n')
             except KeyError as e:
