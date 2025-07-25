@@ -1,0 +1,11 @@
+label:
+  eng: Word Translation
+opts:
+  contains: _=
+  is: '='
+  is_not: '!='
+  starts_with: ^=
+  ends_with: '&='
+  matches: '*='
+  matches_not: '!*='
+type: set

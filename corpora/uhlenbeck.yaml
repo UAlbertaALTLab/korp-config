@@ -1,6 +1,6 @@
 id: uhlenbeck
 title: "1911 Uhlenbeck Texts"
-description: ""
+description: "Texts in Converted Frantz Orthography"
 limited_access: true
 reading_mode: true
 mode:
@@ -18,15 +18,11 @@ context:
       eng: full text
     value: 1 text
 pos_attributes:
-  - analysis: analysis
-  - morphemes: morphemes
-  - gloss: gloss
-  - word_syll: word_syll
   - notes: notes
-  - sentence_translation: translation
+  - wordtranslation: uh_wordtranslation
+  - sentence_translation: uh_translation
   - sentence_id: sentence_id
-  - sentence_original: original
-  - sentence_original_syll: original_syll
+  - sentence_original: uh_original
 struct_attributes:
   - text_title: title
   - text_source: source

@@ -1,0 +1,11 @@
+label:
+  eng: Original Blackfoot Phrase (From Source)
+opts:
+  contains: _=
+  is: '='
+  is_not: '!='
+  starts_with: ^=
+  ends_with: '&='
+  matches: '*='
+  matches_not: '!*='
+type: set
