@@ -2,12 +2,13 @@ import csv
 import io
 import os
 
+IS_UHLENBECK=True
 CORPUS_OUTPUT='uhlenbeck.vrt'
 CORPUS_TITLE='Uhlenbeck texts'
 header0= 'Original Blackfoot Phrase (From Source)'.lower()
 header1_candidates = [x.lower() for x in [
     'Blackfoot Word',
-    'Blackfoot Word (From Source)'
+    'Blackfoot Word (Converted Frantz Orthography)'
 ]]
 header2= 'Morpheme Breaks'.lower()
 header3= 'Morpheme Gloss'.lower()
@@ -84,7 +85,11 @@ def process_file(INPUT_FILE, ID, HAS_DESCRIPTION_IN_HEADERS=True):
         
         f.write(f'<sentence id="{attr_escape(str(index))}" original="{attr_escape(original)}" translation="{attr_escape(translation)}" original_syll="{attr_escape(original_syll)}">\n')
         for row_index, row in enumerate(sentence):
-            f.write(f'{row[header1].strip()}\t{vrt_escape(row[header2]) if header2 in row.keys() else ""}\t{vrt_escape(row[header3]) if header3 in row.keys() else ""}\t{"&NewLine;" if row_index == len(sentence) - 1 else "&nbsp;"}\t{vrt_escape(row[header5]) if header5 in row.keys() else ""}\t{vrt_escape(row[header6]) if header6 in row.keys() else ""}\n')
+            try:
+                f.write(f'{row[header1].strip()}\t{vrt_escape(row[header2]) if header2 in row.keys() else ""}\t{vrt_escape(row[header3]) if header3 in row.keys() else ""}\t{"&NewLine;" if row_index == len(sentence) - 1 else "&nbsp;"}\t{vrt_escape(row[header5]) if header5 in row.keys() else ""}\t{vrt_escape(row[header6]) if header6 in row.keys() else ""}\n')
+            except KeyError as e:
+                print(f"Problem in {row_index}:{row}")
+                raise e
         f.write('</sentence>\n')
     f.write('</text>\n')
 
