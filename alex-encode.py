@@ -2,9 +2,9 @@ import csv
 import io
 import os
 
-IS_UHLENBECK=True
-CORPUS_OUTPUT='uhlenbeck.vrt'
-CORPUS_TITLE='Uhlenbeck texts'
+IS_UHLENBECK=False
+CORPUS_OUTPUT='uhlenbeck.vrt' if IS_UHLENBECK else 'blackfoot.vrt' 
+CORPUS_TITLE=f'{"Uhlenbeck" if IS_UHLENBECK else "Blackfoot"} texts'
 header0= 'Original Blackfoot Phrase (From Source)'.lower()
 header1_candidates = [x.lower() for x in [
     'Blackfoot Word',
@@ -25,7 +25,7 @@ def empty_row(row):
     return True
 
 def vrt_escape(str):
-    return str.replace('&','&amp;').strip().replace(' ','&#x20;').replace('/','&sol;').replace('<','&lt;').replace('>','&gt;').replace('|','&vert;').replace('\n','&NewLine;')
+    return str.replace('&','&amp;').strip().replace(' ','&#x20;').replace(' ','&#x20;').replace('/','&sol;').replace('<','&lt;').replace('>','&gt;').replace('|','&vert;').replace('\n','&NewLine;')
 
 def attr_escape(str):
     return str.replace('"','&quot;').replace('\n','&NewLine;').strip()
