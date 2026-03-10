@@ -1,7 +1,6 @@
 id: blackfoot
 title: "Blackfoot Narrative Text Corpus"
 description: "Collection by Alexandra Smith"
-limited_access: true
 reading_mode: true
 mode:
   - name: default
