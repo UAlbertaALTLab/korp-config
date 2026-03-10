@@ -1,7 +1,7 @@
 id: uhlenbeck
 title: "1911 Uhlenbeck Texts"
 description: "Texts in Converted Frantz Orthography"
-limited_access: true
+reading_mode: true
 mode:
   - name: default
     folder: blackfoot
